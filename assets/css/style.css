@@ -283,9 +283,6 @@
   background: var(--bg-blue);
 }
 
-#hero .container {
-  padding-top: 72px;
-}
 
 #hero h1 {
   margin: 0 0 10px 0;
@@ -302,6 +299,7 @@
 }
 
 #hero .btn-get-started {
+  text-decoration: none;
   font-family: var(--font-jost);
   font-weight: 500;
   font-size: 16px;
@@ -320,17 +318,15 @@
 }
 
 #hero .btn-watch-video {
-  font-size: 16px;
+  text-decoration: none;
   display: flex;
   align-items: center;
   transition: 0.5s;
   margin: 10px 0 0 25px;
   color: var(--color-white);
-  line-height: 1;
 }
 
 #hero .btn-watch-video i {
-  line-height: 0;
   color: var(--color-white);
   font-size: 32px;
   transition: 0.3s;
@@ -417,7 +413,7 @@
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 90px 0px;
   overflow: hidden;
 }
 
@@ -466,10 +462,18 @@ section {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 991px) {
+  section {
+    padding-top: 0;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
 .clients {
+  height: 20vh;
   padding: 12px 0;
   text-align: center;
 }
@@ -488,6 +492,10 @@ section {
 }
 
 @media (max-width: 768px) {
+  .clients {
+    height: 100%;
+  }
+
   .clients img {
     max-width: 40%;
   }
@@ -601,6 +609,7 @@ section {
 }
 
 .why-us .accordion-list a {
+  text-decoration: none;
   display: block;
   position: relative;
   font-family: var(--font-poppins);
@@ -808,6 +817,7 @@ section {
 }
 
 .cta .cta-btn {
+  text-decoration: none;
   font-family: var(--font-jost);
   font-weight: 500;
   font-size: 16px;
@@ -1015,6 +1025,7 @@ section {
 }
 
 .team .member .social a {
+  text-decoration: none;
   transition: ease-in-out 0.3s;
   display: flex;
   align-items: center;
@@ -1118,6 +1129,7 @@ section {
 }
 
 .pricing .buy-btn {
+  text-decoration: none;
   display: inline-block;
   padding: 12px 35px;
   border-radius: 50px;
@@ -1328,20 +1340,15 @@ section {
   color: var(--color-white);
 }
 
-.contact .php-email-form {
+.contact .form-control {
   width: 100%;
-  border-top: 3px solid var(--blue-light);
-  border-bottom: 3px solid var(--blue-light);
   padding: 30px;
   background: var(--color-white);
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
 
-.contact .php-email-form .validate {
+.contact .form-control .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1349,7 +1356,7 @@ section {
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+.contact .form-control .error-message {
   display: none;
   color: var(--color-white);
   background: #ed3c0d;
@@ -1358,11 +1365,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .form-control .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .form-control .sent-message {
   display: none;
   color: var(--color-white);
   background: #18d26e;
@@ -1371,14 +1378,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .form-control .loading {
   display: none;
   background: var(--color-white);
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .form-control .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1391,36 +1398,36 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form .form-group {
+.contact .form-control .form-group {
   margin-bottom: 20px;
 }
 
-.contact .php-email-form label {
+.contact .form-control label {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .form-control input,
+.contact .form-control textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contact .form-control input:focus,
+.contact .form-control textarea:focus {
   border-color: var(--blue-light);
 }
 
-.contact .php-email-form input {
+.contact .form-control input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact .form-control textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .form-control button[type=submit] {
   background: var(--blue-light);
   border: 0;
   padding: 12px 34px;
@@ -1429,7 +1436,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .form-control button[type=submit]:hover {
   background: #209dd8;
 }
 
@@ -1521,22 +1528,23 @@ section {
 }
 
 #footer .footer-newsletter form {
-  margin-top: 30px;
   background: var(--color-white);
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
   text-align: left;
+  padding: 6px 10px;
+  border-radius: 50px;
+  position: relative;
+
 }
 
 #footer .footer-newsletter form input[type=email] {
   border: 0;
   padding: 4px 8px;
   width: calc(100% - 100px);
+  outline: none;
 }
 
-#footer .footer-newsletter form input[type=submit] {
+#footer .footer-newsletter form input[type=button] {
   position: absolute;
   top: 0;
   right: 0;
@@ -1552,8 +1560,8 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: #209dd8;
+#footer .footer-newsletter form input[type=button]:hover {
+  background: var(--blue-dark);
 }
 
 #footer .footer-top {
@@ -1595,17 +1603,11 @@ section {
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
 #footer .footer-top .footer-links ul i {
-  padding-right: 2px;
+  padding-right: 10px;
   color: var(--blue-light);
   font-size: 18px;
-  line-height: 1;
 }
 
 #footer .footer-top .footer-links ul li {
@@ -1614,15 +1616,10 @@ section {
   align-items: center;
 }
 
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
 
 #footer .footer-top .footer-links ul a {
   color: #777777;
   transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
 }
 
 #footer .footer-top .footer-links ul a:hover {
@@ -1652,19 +1649,10 @@ section {
 }
 
 #footer .footer-bottom {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 0;
   color: var(--color-white);
 }
 
-#footer .copyright {
-  float: left;
-}
-
-#footer .credits {
-  float: right;
-  font-size: 13px;
-}
 
 #footer .credits a {
   transition: 0.3s;

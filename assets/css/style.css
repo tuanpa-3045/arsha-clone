@@ -970,12 +970,13 @@ section {
 
 .team .member .pic {
   overflow: hidden;
-  width: 180px;
+  height: 180px;
   border-radius: 50%;
 }
 
 .team .member .pic img {
   transition: ease-in-out 0.3s;
+  height:100%;
 }
 
 .team .member:hover {

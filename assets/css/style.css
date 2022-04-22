@@ -562,9 +562,7 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
-.why-us .content {
-  padding: 60px 100px 0 100px;
-}
+
 
 .why-us .content h3 {
   font-weight: 400;
@@ -589,9 +587,6 @@ section {
   background-position: center center;
 }
 
-.why-us .accordion-list {
-  padding: 0 100px 60px 100px;
-}
 
 .why-us .accordion-list ul {
   padding: 0;
